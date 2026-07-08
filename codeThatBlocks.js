@@ -1,4 +1,5 @@
 import {useBlocker} from './blocker.js';
+import random from 'random';
 
 const {blocker} = useBlocker();
 
@@ -8,7 +9,7 @@ export const startBlockingCode  = (t) => {
     blocker.current = new Promise(res => {
         setTimeout(() => {
             console.log('promise resolving now')
-            res(true);
+            res(random.int(1,100));
         }, timeout);
     });
 }

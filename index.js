@@ -10,7 +10,10 @@ console.log(blocker.current);
 
 const [timeout1, timeout2, timeout3] = [1000, 2000, random.int(500,3500)];
 
-console.log(timeout1, timeout2, timeout3);
+console.log('code 1 timeout: ' + timeout1);
+console.log('code 2 timeout: ' + timeout2);
+console.log('code 3 timeout: ' + timeout3);
+console.log('\n');
 
 setTimeout(async () => {
     console.log('1 code before block');
